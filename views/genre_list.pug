@@ -1,0 +1,10 @@
+extends layout
+
+block content 
+  h1 Genre List 
+  ul
+    for el in genre_list
+      li
+        a(href=el.url) !{el.name}
+    else
+      | No genre list found

@@ -1,0 +1,14 @@
+extends layout 
+
+block content
+  h1= title
+  h2= genre.name
+
+  if books.length > 0
+    p Delete the following #{books.length > 1 ? 'books' : 'book'}
+    for book in books
+      li
+        a(href=book.url + '/delete') #{book.title}
+  else 
+    form(method='POST' action='')
+      button(type='submit') You sure?

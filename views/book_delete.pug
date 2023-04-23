@@ -1,0 +1,15 @@
+extends layout 
+
+block content
+  h1= title
+  h3= book.title
+
+  if bookinstance.length > 0
+    h1 Delete the following #{bookinstance.length > 1 ? 'bookinstances' : 'bookinstance'}
+    for instance in bookinstance
+      li
+        a(href=instance.url) #{instance.imprint} #{instance._id}
+  else 
+    form(method='POST' action='')
+      button(type='submit') You sure?
+
