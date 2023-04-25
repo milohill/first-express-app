@@ -23,8 +23,7 @@ let usersRouter = require('./routes/users');
 let catalogRouter = require('./routes/catalog');
 
 let app = express();
-const dev_db_url =
-  'mongodb+srv://aleifr755375:3ixY35ppSumoI599@cluster0.b5brhup.mongodb.net/?retryWrites=true&w=majority';
+const dev_db_url = null;
 const mongoDB_URL = process.env.MONGODB_URL || dev_db_url;
 
 // view engine setup
